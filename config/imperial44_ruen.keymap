@@ -25,6 +25,18 @@
             bindings = <&caps_word>;
             key-positions = <6 7>;
         };
+
+        ru_dot {
+            bindings = <&kp RU_DOT>;
+            key-positions = <20 21>;
+            layers = <1>;
+        };
+
+        ru_comma {
+            bindings = <&kp RU_COMMA>;
+            key-positions = <20 19>;
+            layers = <1>;
+        };
     };
 
     macros {
