@@ -92,7 +92,7 @@
                 <&macro_wait_time 10>,
                 <&kp GRAVE &kp GRAVE &kp GRAVE>,
                 <&macro_wait_time 10>,
-                <&kp UP>;
+                <&kp UP &kp ENTER>;
 
             label = "CODE";
         };
