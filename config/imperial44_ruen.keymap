@@ -96,6 +96,22 @@
 
             label = "CODE";
         };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp V>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+
+            label = "PASTE";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
     };
 
     behaviors {
@@ -154,7 +170,7 @@
 
         nav {
             bindings = <
-&trans     &trans  &kp HOME      &kp UP    &kp END        &kp INS                                        &msc SCRL_UP    &kp N7  &kp N8  &kp N9  &trans        &trans
+&trans     &trans  &kp HOME      &kp UP    &kp END        &kp INS                                        &msc SCRL_UP    &kp N7  &kp N8  &kp N9  &paste        &trans
 &trans     &mo 7   &kp LEFT      &kp DOWN  &kp RIGHT      &kp RET                                        &msc SCRL_DOWN  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
 &layer_en  &trans  &kp LC(LEFT)  &trans    &kp LC(RIGHT)  &kp DEL  &kp PRINTSCREEN    &kp LC(BACKSPACE)  &trans          &kp N1  &kp N2  &kp N3  &trans        &layer_ru
                                            &trans         &trans   &trans             &kp BACKSPACE      &mo 5           &trans
@@ -202,6 +218,8 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
                                     &trans    &trans  &trans    &trans  &trans          &trans
             >;
+
+            label = "Mouse";
         };
 
         fn {
@@ -211,6 +229,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp F1  &kp F2  &kp F3  &trans   &trans
                                 &trans  &trans  &trans    &trans  &trans   &trans
             >;
+
+            label = "FN";
         };
     };
 };
