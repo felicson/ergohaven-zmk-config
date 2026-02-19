@@ -27,13 +27,27 @@
         };
 
         dot {
-            bindings = <&kp RU_DOT>;
+            bindings = <&kp DOT>;
             key-positions = <8 9>;
+            layers = <0>;
         };
 
         comma {
+            bindings = <&kp COMMA>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        ru_dot {
+            bindings = <&kp RU_DOT>;
+            key-positions = <8 9>;
+            layers = <1>;
+        };
+
+        ru_comma {
             bindings = <&kp RU_COMMA>;
             key-positions = <7 8>;
+            layers = <1>;
         };
     };
 
