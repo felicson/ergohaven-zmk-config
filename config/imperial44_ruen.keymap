@@ -49,6 +49,12 @@
             key-positions = <7 8>;
             layers = <1>;
         };
+
+        ruen_word {
+            bindings = <&to 8>;
+            key-positions = <33 34>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -255,6 +261,16 @@
             >;
 
             label = "FN";
+        };
+
+        ruen_word {
+            display-name = "ruen_word";
+            bindings = <
+&to 1    &kp Q              &kp W                 &kp E                 &kp R                   &kp T                    &kp Y  &kp U                     &kp I                   &kp O                   &kp P                  &kp BSLH
+&kp TAB  &hrm_left LCTRL A  &hrm_left LEFT_GUI S  &hrm_left LEFT_ALT D  &hrm_left LEFT_SHIFT F  &kp G                    &kp H  &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_ALT K  &hrm_right RIGHT_WIN L  &hrm_right RCTRL SEMI  &kp SINGLE_QUOTE
+&trans   &kp Z              &kp X                 &kp C                 &kp V                   &kp B  &trans    &trans  &kp N  &kp M                     &kp COMMA               &kp DOT                 &kp SLASH              &trans
+                                                                        &to 1                   &mo 2  &to 1     &to 1   &mo 3  &trans
+            >;
         };
     };
 };
