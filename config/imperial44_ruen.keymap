@@ -28,25 +28,25 @@
 
         dot {
             bindings = <&kp DOT>;
-            key-positions = <8 9>;
+            key-positions = <8 20>;
             layers = <0>;
         };
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <7 8>;
+            key-positions = <19 7>;
             layers = <0>;
         };
 
         ru_dot {
             bindings = <&kp RU_DOT>;
-            key-positions = <8 9>;
+            key-positions = <8 20>;
             layers = <1>;
         };
 
         ru_comma {
             bindings = <&kp RU_COMMA>;
-            key-positions = <7 8>;
+            key-positions = <7 19>;
             layers = <1>;
         };
 
