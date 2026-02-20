@@ -51,7 +51,7 @@
         };
 
         ruen_word {
-            bindings = <&to 8>;
+            bindings = <&layer_ruen_word>;
             key-positions = <33 34>;
             layers = <1>;
         };
@@ -140,6 +140,15 @@
 
             label = "PASTE";
             wait-ms = <30>;
+            tap-ms = <30>;
+        };
+
+        layer_ruen_word: layer_ruen_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 8 &to_en>;
+            label = "LAYER_RUEN_WORD";
+            wait-ms = <0>;
             tap-ms = <30>;
         };
     };
@@ -266,10 +275,10 @@
         ruen_word {
             display-name = "ruen_word";
             bindings = <
-&to 1    &kp Q              &kp W                 &kp E                 &kp R                   &kp T                    &kp Y  &kp U                     &kp I                   &kp O                   &kp P                  &kp BSLH
-&kp TAB  &hrm_left LCTRL A  &hrm_left LEFT_GUI S  &hrm_left LEFT_ALT D  &hrm_left LEFT_SHIFT F  &kp G                    &kp H  &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_ALT K  &hrm_right RIGHT_WIN L  &hrm_right RCTRL SEMI  &kp SINGLE_QUOTE
-&trans   &kp Z              &kp X                 &kp C                 &kp V                   &kp B  &trans    &trans  &kp N  &kp M                     &kp COMMA               &kp DOT                 &kp SLASH              &trans
-                                                                        &to 1                   &mo 2  &to 1     &to 1   &mo 3  &trans
+&layer_ru  &kp Q              &kp W                 &kp E                 &kp R                   &kp T                          &kp Y  &kp U                     &kp I                   &kp O                   &kp P                  &kp BSLH
+&kp TAB    &hrm_left LCTRL A  &hrm_left LEFT_GUI S  &hrm_left LEFT_ALT D  &hrm_left LEFT_SHIFT F  &kp G                          &kp H  &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_ALT K  &hrm_right RIGHT_WIN L  &hrm_right RCTRL SEMI  &kp SINGLE_QUOTE
+&trans     &kp Z              &kp X                 &kp C                 &kp V                   &kp B  &trans       &trans     &kp N  &kp M                     &kp COMMA               &kp DOT                 &kp SLASH              &trans
+                                                                          &layer_ru               &mo 2  &layer_ru    &layer_ru  &mo 3  &trans
             >;
         };
     };
