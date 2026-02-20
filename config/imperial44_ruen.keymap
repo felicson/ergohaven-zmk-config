@@ -151,6 +151,24 @@
             wait-ms = <0>;
             tap-ms = <30>;
         };
+
+        ruenw_key: ruen_word_key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to_en>,
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&layer_ru>;
+
+            label = "RUEN_WORD_KEY";
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
     };
 
     behaviors {
@@ -275,10 +293,10 @@
         ruen_word {
             display-name = "ruen_word";
             bindings = <
-&layer_ru  &kp Q              &kp W                 &kp E                 &kp R                   &kp T                          &kp Y  &kp U                     &kp I                   &kp O                   &kp P                  &kp BSLH
-&kp TAB    &hrm_left LCTRL A  &hrm_left LEFT_GUI S  &hrm_left LEFT_ALT D  &hrm_left LEFT_SHIFT F  &kp G                          &kp H  &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_ALT K  &hrm_right RIGHT_WIN L  &hrm_right RCTRL SEMI  &kp SINGLE_QUOTE
-&trans     &kp Z              &kp X                 &kp C                 &kp V                   &kp B  &trans       &trans     &kp N  &kp M                     &kp COMMA               &kp DOT                 &kp SLASH              &trans
-                                                                          &layer_ru               &mo 2  &layer_ru    &layer_ru  &mo 3  &trans
+&ruenw_key ESC  &kp Q              &kp W                 &kp E                 &kp R                   &kp T                                        &kp Y  &kp U                     &kp I                   &kp O                   &kp P                  &kp BSLH
+&kp TAB         &hrm_left LCTRL A  &hrm_left LEFT_GUI S  &hrm_left LEFT_ALT D  &hrm_left LEFT_SHIFT F  &kp G                                        &kp H  &hrm_right RIGHT_SHIFT J  &hrm_right RIGHT_ALT K  &hrm_right RIGHT_WIN L  &hrm_right RCTRL SEMI  &kp SINGLE_QUOTE
+&trans          &kp Z              &kp X                 &kp C                 &kp V                   &kp B  &trans              &trans            &kp N  &kp M                     &kp COMMA               &kp DOT                 &kp SLASH              &trans
+                                                                               &ruenw_key ESC          &mo 2  &ruenw_key SPACE    &ruenw_key ENTER  &mo 3  &trans
             >;
         };
     };
