@@ -55,6 +55,11 @@
             key-positions = <33 34>;
             layers = <1>;
         };
+
+        warpd {
+            bindings = <&kp RA(RG(LS(F)))>;
+            key-positions = <3 4>;
+        };
     };
 
     macros {
