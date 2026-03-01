@@ -63,7 +63,7 @@
 
         warpd {
             bindings = <&kp RA(RG(LS(F)))>;
-            key-positions = <3 4>;
+            key-positions = <3 15>;
         };
     };
 
