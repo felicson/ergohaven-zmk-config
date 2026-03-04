@@ -227,16 +227,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
-
-        layer_tap: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
